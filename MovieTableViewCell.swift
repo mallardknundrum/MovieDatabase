@@ -31,10 +31,7 @@ class MovieTableViewCell: UITableViewCell {
         self.movieTitleLabel.text = movie.title
         self.movieDescriptionTextView.text = movie.description
         self.movieRatingLabel.text = "\(movie.rating)/10"
-        ImageController.image(forURL: movie.imageURL, completion: { (image) in
-            self.movieImageView.image = image
-            
-        })
+        self.movieImageView.image = movie.image
     }
     
 }

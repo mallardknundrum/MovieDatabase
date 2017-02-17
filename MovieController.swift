@@ -31,14 +31,20 @@ class MovieController {
             guard let topDictionary = (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)) as? [String: Any] else { print("Serialization failed. \n dataResponseString: \n \(responseDataString)"); completion([]); return }
             guard let resultsDictionary = topDictionary["results"] as? [[String: Any]] else { print("Could not get results dictionary from top dictionary."); completion([]); return }
             let movies = resultsDictionary.flatMap({Movie(jsonDictoinary: $0)})
+            
+            let group = DispatchGroup()
+            
             for movie in movies {
+                group.enter()
                 ImageController.image(forURL: movie.imageURL, completion: { (image) in
                     movie.image = image
+                    group.leave()
                 })
             }
             
-            completion(movies)
-            return
+            group.notify(queue: DispatchQueue.main, execute: {
+                completion(movies)
+            })
         }
     }
 }

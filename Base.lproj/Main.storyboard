@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,49 +33,50 @@
                                 <rect key="frame" x="0.0" y="72" width="414" height="371"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aMS-Sa-SNm" id="YK5-J9-zCd">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="370.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="371"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mKL-7g-i65">
-                                            <rect key="frame" x="17" y="30" width="223" height="221"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mKL-7g-i65">
+                                            <rect key="frame" x="8" y="8" width="207" height="311"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwn-Ra-Lpa">
-                                            <rect key="frame" x="248" y="287" width="158" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IrZ-j3-eiQ">
-                                            <rect key="frame" x="248" y="30" width="158" height="221"/>
+                                            <rect key="frame" x="229" y="8" width="177" height="312"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="158" id="AFe-cs-1D5"/>
+                                                <constraint firstAttribute="width" constant="177" id="o8v-8s-vwM"/>
                                             </constraints>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BU8-ue-m0K">
-                                            <rect key="frame" x="17" y="287" width="223" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BU8-ue-m0K">
+                                            <rect key="frame" x="8" y="327" width="207" height="25"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwn-Ra-Lpa">
+                                            <rect key="frame" x="229" y="331" width="177" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="BU8-ue-m0K" firstAttribute="baseline" secondItem="Uwn-Ra-Lpa" secondAttribute="baseline" id="CG8-uk-Jvq"/>
-                                        <constraint firstItem="mKL-7g-i65" firstAttribute="bottom" secondItem="IrZ-j3-eiQ" secondAttribute="bottom" id="CSO-Iu-OWq"/>
-                                        <constraint firstItem="Uwn-Ra-Lpa" firstAttribute="leading" secondItem="BU8-ue-m0K" secondAttribute="trailing" constant="8" symbolic="YES" id="KBf-RO-2mg"/>
-                                        <constraint firstItem="mKL-7g-i65" firstAttribute="top" secondItem="IrZ-j3-eiQ" secondAttribute="top" id="Ll3-h0-vJE"/>
-                                        <constraint firstItem="mKL-7g-i65" firstAttribute="leading" secondItem="BU8-ue-m0K" secondAttribute="leading" id="SiG-2b-UIH"/>
-                                        <constraint firstItem="IrZ-j3-eiQ" firstAttribute="trailing" secondItem="Uwn-Ra-Lpa" secondAttribute="trailing" id="Udx-Bs-9Ds"/>
-                                        <constraint firstItem="BU8-ue-m0K" firstAttribute="top" secondItem="mKL-7g-i65" secondAttribute="bottom" constant="36" id="W7B-nI-VkQ"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="BU8-ue-m0K" secondAttribute="bottom" constant="54" id="gQL-a0-gSG"/>
-                                        <constraint firstItem="IrZ-j3-eiQ" firstAttribute="trailing" secondItem="YK5-J9-zCd" secondAttribute="trailingMargin" id="ix5-Hl-d2e"/>
-                                        <constraint firstItem="mKL-7g-i65" firstAttribute="leading" secondItem="YK5-J9-zCd" secondAttribute="leadingMargin" constant="9" id="ji7-Gc-Q9v"/>
-                                        <constraint firstItem="mKL-7g-i65" firstAttribute="top" secondItem="YK5-J9-zCd" secondAttribute="topMargin" constant="22" id="ppb-A5-loe"/>
-                                        <constraint firstItem="IrZ-j3-eiQ" firstAttribute="leading" secondItem="Uwn-Ra-Lpa" secondAttribute="leading" id="roc-Uj-Ms1"/>
-                                        <constraint firstItem="IrZ-j3-eiQ" firstAttribute="leading" secondItem="mKL-7g-i65" secondAttribute="trailing" constant="8" symbolic="YES" id="wy1-XL-Y3J"/>
+                                        <constraint firstItem="mKL-7g-i65" firstAttribute="top" secondItem="IrZ-j3-eiQ" secondAttribute="top" id="3FW-sz-YyH"/>
+                                        <constraint firstItem="mKL-7g-i65" firstAttribute="top" secondItem="YK5-J9-zCd" secondAttribute="topMargin" id="3f5-EU-SPE"/>
+                                        <constraint firstItem="mKL-7g-i65" firstAttribute="trailing" secondItem="BU8-ue-m0K" secondAttribute="trailing" id="4bD-BB-7b6"/>
+                                        <constraint firstItem="IrZ-j3-eiQ" firstAttribute="trailing" secondItem="Uwn-Ra-Lpa" secondAttribute="trailing" id="9wE-G2-Y3p"/>
+                                        <constraint firstItem="IrZ-j3-eiQ" firstAttribute="leading" secondItem="Uwn-Ra-Lpa" secondAttribute="leading" id="Cor-9d-erM"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="BU8-ue-m0K" secondAttribute="bottom" constant="10" id="DNL-P8-fb7"/>
+                                        <constraint firstItem="Uwn-Ra-Lpa" firstAttribute="baseline" secondItem="BU8-ue-m0K" secondAttribute="firstBaseline" id="JOd-rC-tII"/>
+                                        <constraint firstItem="mKL-7g-i65" firstAttribute="leading" secondItem="YK5-J9-zCd" secondAttribute="leadingMargin" id="TyT-Co-ILV"/>
+                                        <constraint firstItem="BU8-ue-m0K" firstAttribute="bottom" secondItem="Uwn-Ra-Lpa" secondAttribute="bottom" id="XVz-EN-V3M"/>
+                                        <constraint firstItem="BU8-ue-m0K" firstAttribute="top" secondItem="mKL-7g-i65" secondAttribute="bottom" constant="8" symbolic="YES" id="aQd-K0-mdT"/>
+                                        <constraint firstItem="mKL-7g-i65" firstAttribute="bottom" secondItem="IrZ-j3-eiQ" secondAttribute="bottom" id="bHt-vP-Juf"/>
+                                        <constraint firstItem="IrZ-j3-eiQ" firstAttribute="leading" secondItem="mKL-7g-i65" secondAttribute="trailing" constant="14" id="d2p-q8-tGS"/>
+                                        <constraint firstItem="IrZ-j3-eiQ" firstAttribute="trailing" secondItem="YK5-J9-zCd" secondAttribute="trailingMargin" id="pdL-6P-AME"/>
+                                        <constraint firstItem="mKL-7g-i65" firstAttribute="leading" secondItem="BU8-ue-m0K" secondAttribute="leading" id="ua4-nO-L7z"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
